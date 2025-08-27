@@ -1,7 +1,9 @@
+# 彥杰用於測試 Node.js(npm) react-vite for GitHub 的 範例程式。
+
 # Copilot 使用說明 - vghtpe-react-vite-test
 
 ## 專案概述
-- **類型：** React + Vite 單頁應用程式 (SPA)，用於台北榮總排班匯出工具
+- **類型：** React + Vite 單頁應用程式 (SPA)。
 - **主要檔案：**
   - `src/main.js`：進入點，操作 `#app` div
   - `index.html`：載入 React 應用程式，設置 root div
@@ -19,22 +21,41 @@
 
 ## 開發者工作流程
 - **本地開發：**
-  - `npm install`（安裝依賴）
-  - `npm run dev`（啟動 Vite 開發伺服器，預設埠 5173）
+  1. 安裝依賴：
+     ```bash
+     npm install
+     ```
+  2. 啟動 Vite 開發伺服器（預設埠 5173）：
+     ```bash
+     npm run dev
+     ```
 - **建置：**
-  - `npm run build`（輸出至 `dist/`）
-  - `npm run preview`（本地預覽建置結果）
+  1. 輸出至 `dist/` 資料夾：
+     ```bash
+     npm run build
+     ```
+  2. 本地預覽建置結果：
+     ```bash
+     npm run preview
+     ```
 - **部署：**
-  - 推送到 `main` 分支會觸發 GitHub Actions 工作流程（`deploy.yml`）
-  - 輸出將發佈到 GitHub Pages 的 `/vghtpe-react-vite-test/`
-- **SPA 回退：** 建置後，`dist/index.html` 會複製為 `dist/404.html`，以確保 GitHub Pages 的路由正確
+  1. 推送到 `main` 分支會觸發 GitHub Actions 工作流程（`deploy.yml`）。
+  2. 輸出將發佈到 GitHub Pages 的 `/vghtpe-react-vite-test/`。
+  3. 部署前需在 GitHub 上設定 Pages：
+     - 到 **Settings → Pages**，將 **Source** 設為 **GitHub Actions**。
+     - （可選）到 **Settings → Actions → General → Workflow permissions**，勾選 **Read and write permissions**。
+     - 回到 **Actions**，對 workflow 按 **Re-run jobs** 或推一次 commit 讓它自動重跑。
+  4. 完成後網站會在：
+     ```
+     https://zhanyanjie6796.github.io/vghtpe-react-vite-test
+     ```
 
 ## 約定與整合點
-- **Vite 配置：** `base` 必須與 repo 子路徑匹配，確保 Pages 資產載入正確
-- **尚無自定義測試腳本或 lint 配置**
-- **建置/部署過程中不需要環境變數或機密**
-- **目前所有程式碼都在單一 JS 檔案中；未來的 React 元件應放在 `src/` 資料夾中**
-- **中文文件：** 請參閱 `說明.txt` 以獲取逐步設置與部署說明
+- **Vite 配置：** `base` 必須與 repo 子路徑匹配，確保 Pages 資產載入正確。
+- **尚無自定義測試腳本或 lint 配置**。
+- **建置/部署過程中不需要環境變數或機密**。
+- **目前所有程式碼都在單一 JS 檔案中；未來的 React 元件應放在 `src/` 資料夾中**。
+- **中文文件：** 請參閱 `說明.txt` 以獲取逐步設置與部署說明。
 
 ## 範例模式
 - **直接操作 DOM：**
