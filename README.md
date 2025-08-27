@@ -38,6 +38,20 @@
      ```bash
      npm run preview
      ```
+
+- **初始化 Git 並推送到 GitHub：**
+```js
+git init
+git remote add origin https://github.com/zhanyanjie6796/vghtpe-react-vite-test.git
+git add .
+git commit -m "自己取名字"
+git push -u origin main  # 要先建立repository.
+```
+之後 GitHub Actions 會自動幫你部署到 Pages，
+完成後網站會在：
+
+https://zhanyanjie6796.github.io/vghtpe-react-vite-test
+
 - **部署：**
   1. 推送到 `main` 分支會觸發 GitHub Actions 工作流程（`deploy.yml`）。
   2. 輸出將發佈到 GitHub Pages 的 `/vghtpe-react-vite-test/`。
@@ -57,15 +71,6 @@
 - **目前所有程式碼都在單一 JS 檔案中；未來的 React 元件應放在 `src/` 資料夾中**。
 - **中文文件：** 請參閱 `說明.txt` 以獲取逐步設置與部署說明。
 
-## 範例模式
-- **直接操作 DOM：**
-  ```js
-  document.querySelector('#app').style.fontFamily = 'Arial, sans-serif';
-  ```
-- **GitHub Pages 的 SPA 回退：**
-  ```json
-  "postbuild": "cp dist/index.html dist/404.html || copy dist\\index.html dist\\404.html"
-  ```
 - **Vite 子路徑配置：**
   ```js
   base: '/vghtpe-react-vite-test/'
