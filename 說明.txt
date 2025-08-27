@@ -1,0 +1,61 @@
+Local 測試：
+npm install # 安裝node_modules
+npm run dev # 預設 http://localhost:5173
+
+================================================
+
+# 2. 安裝依賴
+npm install
+
+# 3. 初始化 Git 並推送到 GitHub
+git init
+git remote add origin https://github.com/zhanyanjie6796/vghtpe-react-vite-test.git
+git add .
+git commit -m "自己取名字"
+git push -u origin main  # 要先建立repository.
+
+
+之後 GitHub Actions 會自動幫你部署到 Pages，
+完成後網站會在：
+
+https://zhanyanjie6796.github.io/vghtpe-react-vite-test
+
+================================================
+彥杰：在做前面git push之前，要先建立repository.
+
+步驟 1. 到 GitHub 建立空的 repository
+進到 https://github.com/new
+Repository name → 填：vghtpe-react-vite-test
+
+建議設為 Public
+不要勾選任何初始化選項（例如 README、.gitignore、license）
+建立完成後，會得到遠端網址：
+https://github.com/zhanyanjie6796/vghtpe-schedule-export-zyj.git
+
+echo "# vghtpe-react-vite-test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/zhanyanjie6796/vghtpe-react-vite-test.git
+git push -u origin main
+
+git remote add origin https://github.com/zhanyanjie6796/vghtpe-react-vite-test.git
+git branch -M main
+git push -u origin main
+================================================
+部署前 git hub 上設定：Pages 啟用
+
+官方 GitHub Pages 流程
+到你的 repo：Settings → Pages
+在 Build and deployment 把 Source 設成 GitHub Actions（不是 None / Branch）。按 Save。
+（可選）到 Settings → Actions → General → Workflow permissions 勾 Read and write permissions。
+回到 Actions，對這次 workflow 按 Re-run jobs（或推一次 commit 讓它自動重跑）。
+
+================================================
+主要修改檔案
+vite.config.mjs
+package.json
+package-lock.json
+deploy.yml
+
