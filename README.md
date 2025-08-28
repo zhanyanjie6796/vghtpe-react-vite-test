@@ -1,4 +1,4 @@
-# 彥杰用於測試 Node.js(npm) react-vite for GitHub 的 範例程式。
+# 彥杰用於測試 Node.js(npm) React-Vite for GitHub Action 部屬到 GitHub Pages的 範例程式。
 
 # Copilot 使用說明 - vghtpe-react-vite-test
 
